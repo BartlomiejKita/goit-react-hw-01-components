@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   margin: auto;
@@ -99,6 +100,14 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       </Stats>
     </Wrapper>
   );
+};
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.object,
 };
 
 export default Profile;
