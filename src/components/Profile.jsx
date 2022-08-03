@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   border: 1px solid #a2b9bc;
   border-radius: 5px;
+  margin-bottom: 30px;
 `;
 
 const Description = styled.div`
