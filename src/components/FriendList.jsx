@@ -5,7 +5,7 @@ const List = styled.ul`
   max-width: 280px;
   width: 100%;
   list-style: none;
-  margin: 0px auto;
+  margin: 0px auto 30px;
   padding: 0px;
 `;
 
