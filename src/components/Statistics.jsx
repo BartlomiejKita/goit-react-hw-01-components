@@ -30,6 +30,7 @@ const Item = styled.li`
   flex-basis: calc(100% / 1);
   text-align: center;
   padding: 5px;
+  background-color: ${props => (props.index % 2 === 0 ? '#DC143C' : '#3b3a30')};
 `;
 
 const Label = styled.span`
@@ -43,7 +44,7 @@ const Percentage = styled.span`
 `;
 
 // const makeRandomColor = () => {
-//   var c = '';
+//   let c = '';
 //   while (c.length < 7) {
 //     c += Math.random().toString(16).substr(-6).substr(-1);
 //   }
@@ -53,15 +54,10 @@ const Percentage = styled.span`
 const Statistics = ({ title, stats }) => {
   return (
     <Wrapper>
-      {title !== '' && <Title>{title}</Title>}
+      {title && <Title>{title}</Title>}
       <List>
         {stats.map((stat, index) => (
-          <Item
-            key={stat.id}
-            style={{
-              backgroundColor: index % 2 === 0 ? '#DC143C' : '#3b3a30',
-            }}
-          >
+          <Item key={stat.id} index={index}>
             <Label>{stat.label}</Label>
             <Percentage>{stat.percentage}%</Percentage>
           </Item>
