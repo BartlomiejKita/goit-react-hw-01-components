@@ -30,26 +30,29 @@ const Item = styled.li`
   flex-basis: calc(100% / 1);
   text-align: center;
   padding: 5px;
-  background-color: ${props => (props.index % 2 === 0 ? '#DC143C' : '#3b3a30')};
+  background-color: ${props =>
+    props.index % 2 === 0
+      ? `${getRandomHexColor()}`
+      : `${getRandomHexColor()}`};
 `;
 
 const Label = styled.span`
   margin-bottom: 5px;
   color: white;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 `;
 
 const Percentage = styled.span`
   color: white;
   font-weight: bold;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 `;
 
-// const makeRandomColor = () => {
-//   let c = '';
-//   while (c.length < 7) {
-//     c += Math.random().toString(16).substr(-6).substr(-1);
-//   }
-//   return '#' + c;
-// };
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
 const Statistics = ({ title, stats }) => {
   return (
