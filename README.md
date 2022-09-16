@@ -20,6 +20,10 @@
 
 - ![React](https://badges.aleen42.com/src/react.svg )
 
+- styled components
+
+- propTypes
+
  
 ### Criteria
 [criteria](https://github.com/goitacademy/react-homework/blob/master/homework-01/README.pl.md )
